@@ -35,11 +35,7 @@ VALUES
     
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-<<<<<<< HEAD
-    descripcion VARCHAR(55) DEFAULT NULL,
-=======
-    nombre VARCHAR(45) NOT NULL,
->>>>>>> 165c1696a325307cb8ee478937c5e09c8eac65b3
+    marca VARCHAR(45) NOT NULL,
     precio DECIMAL(10, 2) NOT NULL,
     stock INT NOT NULL,
     descripcion TEXT,
@@ -93,3 +89,13 @@ VALUES
     ('Olivia', 'Dominguez', 'olivia.dominguez@example.com', '555-1111', 'Avenida MNO, Ciudad O'),
     -- Puedes seguir agregando más registros de vendedores aquí
     ;
+CREATE TABLE facturas (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(45) NOT NULL,
+    apellido VARCHAR(45) NOT NULL,
+    codigopostal INT,
+    direccion VARCHAR(45) DEFAULT NULL,
+    telefonofijo VARCHAR(20) DEFAULT NULL,
+    correo VARCHAR (45) DEFAULT NULL,
+    PRIMARY KEY (id)
+);
