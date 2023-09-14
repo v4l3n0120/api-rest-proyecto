@@ -12,7 +12,7 @@ export const getFacturadores = async(req, res)=> {
         })
     }
 }
-export const getfacturar = async(req, res)=> {
+export const getFacturar = async(req, res)=> {
     try {
         throw new Error('Mi error')
         const [rows] = await pool.query("SELECT * FROM facturadores WHERE id = ?",[req.params.id])
@@ -59,7 +59,7 @@ export const updateFacturadores = async(req, res)=> {
         })
     }
 }
-export const updatefacturar = async(req, res)=> {
+export const updateFacturar = async(req, res)=> {
     try {
         throw new Error('Mi error')
         const {id} = req.params
