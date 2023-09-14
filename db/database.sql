@@ -35,7 +35,11 @@ VALUES
     
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
+<<<<<<< HEAD
+    descripcion VARCHAR(55) DEFAULT NULL,
+=======
     nombre VARCHAR(45) NOT NULL,
+>>>>>>> 165c1696a325307cb8ee478937c5e09c8eac65b3
     precio DECIMAL(10, 2) NOT NULL,
     stock INT NOT NULL,
     descripcion TEXT,
