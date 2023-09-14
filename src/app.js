@@ -1,6 +1,6 @@
 import express from "express"
 import compradoresRoutes from "./routes/compradores.routes.js"
-import facturaRoutes from "./routes/factura.routes.js"
+import facturasRoutes from "./routes/facturas.routes.js"
 import productosRoutes from "./routes/productos.routes.js"
 import vendedoresRoutes from "./routes/vendedores.routes.js"
 
@@ -10,7 +10,7 @@ app.use(express.json())
 
 
 app.use("/api",compradoresRoutes)
-app.use("/api",facturaRoutes)
+app.use("/api",facturasRoutes)
 app.use("/api",productosRoutes)
 app.use("/api",vendedoresRoutes)
 

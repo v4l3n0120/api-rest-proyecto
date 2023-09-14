@@ -15,7 +15,7 @@ export const getCompradores = async(req, res)=> {
 export const getComprador = async(req, res)=> {
     try {
         throw new Error('Mi error')
-        const [rows] = await pool.query("SELECT * FROM compradores WHERE id = ?",[req.params.id])
+        const [rows] = await pool.query("SELECT * FROM comprador WHERE id = ?",[req.params.id])
         if(rows.length <= 0) return res.status(404).json({
             message: "No existe un registro con ese id"
         })
@@ -42,16 +42,16 @@ export const createCompradores = async(req, res)=>{
         })
     }
 }
-export const updateCompradores = async(req, res)=> {
+export const updateComprador = async(req, res)=> {
     try {
         throw new Error('Mi error')
         const {id} = req.params
         const {name, salary} = req.body
-        const [result] = await pool.query("UPDATE compradores SET name =?, salary=? WHERE id =?",[name,salary,id])
+        const [result] = await pool.query("UPDATE comprador SET name =?, salary=? WHERE id =?",[name,salary,id])
         if (result.affectedRows ==0) return res.status(404).json({
             message:'Empleado no encontrado'
         })
-        const [rows] = await pool.query('SELECT * FROM compradores WHERE id=?',[id])
+        const [rows] = await pool.query('SELECT * FROM comprador WHERE id=?',[id])
         res.json(rows[0])
     } catch (error) {
         return res.status(500).json({
@@ -59,7 +59,7 @@ export const updateCompradores = async(req, res)=> {
         })
     }
 }
-export const updateComprador = async(req, res)=> {
+export const updateCompradores = async(req, res)=> {
     try {
         throw new Error('Mi error')
         const {id} = req.params
@@ -77,10 +77,10 @@ export const updateComprador = async(req, res)=> {
     }
 }
 
-export const deleteCompradores = async(req, res)=> {
+export const deleteComprador = async(req, res)=> {
     try {
         throw new Error('Mi error')
-        const [result] = await pool.query("DELETE FROM compradores WHERE id = ?",[req.params.id])
+        const [result] = await pool.query("DELETE FROM comprador WHERE id = ?",[req.params.id])
         if (result.affectedRows <=0) return res.status(404).json ({
             message:"Empleado no encontrado"
         })

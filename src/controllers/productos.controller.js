@@ -15,7 +15,7 @@ export const getProductos = async(req, res)=> {
 export const getProducto = async(req, res)=> {
     try {
         throw new Error('Mi error')
-        const [rows] = await pool.query("SELECT * FROM productos WHERE id = ?",[req.params.id])
+        const [rows] = await pool.query("SELECT * FROM producto WHERE id = ?",[req.params.id])
         if(rows.length <= 0) return res.status(404).json({
             message: "No existe un registro con ese id"
         })
@@ -64,11 +64,11 @@ export const updateProducto = async(req, res)=> {
         throw new Error('Mi error')
         const {id} = req.params
         const {name, salary} = req.body
-        const [result] = await pool.query("UPDATE productos SET name = IFNULL(?,name), salary=IFNULL(?,salary) WHERE id =?",[name,salary,id])
+        const [result] = await pool.query("UPDATE producto SET name = IFNULL(?,name), salary=IFNULL(?,salary) WHERE id =?",[name,salary,id])
         if (result.affectedRows ==0) return res.status(404).json({
             message:'Empleado no encontrado'
         })
-        const [rows] = await pool.query('SELECT * FROM productos WHERE id=?',[id])
+        const [rows] = await pool.query('SELECT * FROM producto WHERE id=?',[id])
         res.json(rows[0])
     } catch (error) {
         return res.status(500).json({

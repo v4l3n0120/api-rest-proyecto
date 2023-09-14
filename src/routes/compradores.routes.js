@@ -1,14 +1,14 @@
 import { Router } from "express"
-import { getCompradores, createCompradores, updateCompradores, deleteCompradores, getCompradores, updateCompradores } from "../controllers/compradores.controller.js"
+import { getCompradores, createCompradores, updateComprador, deleteComprador, getComprador, updateCompradores } from "../controllers/compradores.controller.js"
 
 
 const router = Router()
 
 router.get('/compradores',getCompradores)
-router.get('/compradores/:id',getCompradores)
+router.get('/compradores/:id',getComprador)
 router.post('/compradores',createCompradores)
-router.put('/compradores/:id',updateCompradores)
+router.put('/compradores/:id',updateComprador)
 router.patch('/compradores/:id',updateCompradores)
-router.delete('/compradores/:id',deleteCompradores)
+router.delete('/compradores/:id',deleteComprador)
 
 export default router
