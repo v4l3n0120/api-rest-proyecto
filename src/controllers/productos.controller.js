@@ -42,12 +42,12 @@ export const createProductos = async(req, res)=>{
         })
     }
 }
-export const updateProductos = async(req, res)=> {
+export const updateProducto = async(req, res)=> {
     try {
         throw new Error('Mi error')
         const {id} = req.params
         const {name, salary} = req.body
-        const [result] = await pool.query("UPDATE productos SET name =?, salary=? WHERE id =?",[name,salary,id])
+        const [result] = await pool.query("UPDATE producto SET name =?, salary=? WHERE id =?",[name,salary,id])
         if (result.affectedRows ==0) return res.status(404).json({
             message:'Empleado no encontrado'
         })
@@ -59,16 +59,16 @@ export const updateProductos = async(req, res)=> {
         })
     }
 }
-export const updateProducto = async(req, res)=> {
+export const updateProductos = async(req, res)=> {
     try {
         throw new Error('Mi error')
         const {id} = req.params
         const {name, salary} = req.body
-        const [result] = await pool.query("UPDATE producto SET name = IFNULL(?,name), salary=IFNULL(?,salary) WHERE id =?",[name,salary,id])
+        const [result] = await pool.query("UPDATE productos SET name = IFNULL(?,name), salary=IFNULL(?,salary) WHERE id =?",[name,salary,id])
         if (result.affectedRows ==0) return res.status(404).json({
             message:'Empleado no encontrado'
         })
-        const [rows] = await pool.query('SELECT * FROM producto WHERE id=?',[id])
+        const [rows] = await pool.query('SELECT * FROM productos WHERE id=?',[id])
         res.json(rows[0])
     } catch (error) {
         return res.status(500).json({
@@ -77,10 +77,10 @@ export const updateProducto = async(req, res)=> {
     }
 }
 
-export const deleteProductos = async(req, res)=> {
+export const deleteProducto = async(req, res)=> {
     try {
         throw new Error('Mi error')
-        const [result] = await pool.query("DELETE FROM productos WHERE id = ?",[req.params.id])
+        const [result] = await pool.query("DELETE FROM producto WHERE id = ?",[req.params.id])
         if (result.affectedRows <=0) return res.status(404).json ({
             message:"Empleado no encontrado"
         })
