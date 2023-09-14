@@ -91,3 +91,15 @@ CREATE TABLE facturas (
     correo VARCHAR (45) DEFAULT NULL,
     PRIMARY KEY (id)
 );
+INSERT INTO facturas (nombre, apellido, codigopostal, direccion, telefonofijo, correo)
+VALUES
+    ('Juan', 'Perez', 12345, 'Calle 123', '555-123-4567', 'juan@example.com'),
+    ('Maria', 'Lopez', 54321, 'Avenida 456', '555-987-6543', 'maria@example.com'),
+    ('Carlos', 'Gomez', 67890, 'Calle 789', '555-456-7890', 'carlos@example.com'),
+    ('Ana', 'Martinez', 98765, 'Avenida 987', '555-876-5432', 'ana@example.com'),
+    ('Luis', 'Rodriguez', 23456, 'Calle 234', '555-234-5678', 'luis@example.com'),
+    ('Laura', 'Gonzalez', 34567, 'Avenida 345', '555-765-4321', 'laura@example.com'),
+    ('Pedro', 'Sanchez', 87654, 'Calle 876', '555-654-3210', 'pedro@example.com'),
+    ('Isabel', 'Torres', 76543, 'Avenida 765', '555-321-6547', 'isabel@example.com'),
+    ('Miguel', 'Fernandez', 45678, 'Calle 456', '555-876-5432', 'miguel@example.com'),
+    ('Sofia', 'Ramirez', 56789, 'Avenida 567', '555-987-6541', 'sofia@example.com');
