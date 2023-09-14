@@ -33,7 +33,7 @@ VALUES
 
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    marca VARCHAR(55) DEFAULT NULL,
+    nombre VARCHAR(45) NOT NULL,
     precio DECIMAL(10, 2) NOT NULL,
     stock INT NOT NULL,
     descripcion TEXT,
@@ -53,30 +53,6 @@ VALUES
     ('Computadoras', 649.99, 15, 'Computadora de escritorio con pantalla grande'),
     ('Goyas', 19.99, 80, 'Producto de la marca Goyas en oferta'),
     ('Electrodomésticos', 199.99, 15, 'Lavadora automática de carga frontal'),
-     -- Puedes seguir agregando más registros de vendedores aquí
-    ;
-
-CREATE TABLE proveedores(
-    id INT(11) not null AUTO_INCREMENT,
-    nombre Varchar(45) DEFAULT NULL,
-    apellido VARCHAR (45) NOT NULL,
-    codigopostal INT,
-    telefonofijo VARCHAR (20) DEFAULT NULL,
-    telefonocelular VARCHAR (20) DEFAULT NULL, 
-    correo VARCHAR (45) DEFAULT NULL,
-    PRIMARY KEY (id)
-);
-
--- Insertar datos de proveedores en la tabla
-INSERT INTO proveedores (nombre, apellido, codigopostal, telefonofijo, telefonocelular, correo)
-VALUES
-    ('Proveedor 1', 'Apellido1', '12345', '555-1234', '555-5678', 'proveedor1@example.com'),
-    ('Proveedor 2', 'Apellido2', '54321', '555-9876', '555-4321', 'proveedor2@example.com'),
-    ('Proveedor 3', 'Apellido3', '67890', '555-1111', '555-2222', 'proveedor3@example.com'),
-    ('Proveedor 4', 'Apellido4', '34567', '555-7890', '555-3456', 'proveedor4@example.com'),
-    ('Proveedor 5', 'Apellido5', '45678', '555-2222', '555-9999', 'proveedor5@example.com'),
-    ('Proveedor 6', 'Apellido6', '56789', '555-3333', '555-7777', 'proveedor6@example.com'),
-    ('Proveedor 7', 'Apellido7', '67890', '555-4444', '555-6666', 'proveedor7@example.com'),
      -- Puedes seguir agregando más registros de vendedores aquí
     ;
 
