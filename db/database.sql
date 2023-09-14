@@ -78,15 +78,7 @@ VALUES
     ('Ana', 'Martínez', 'ana.martinez@example.com', '555-7890', 'Calle ABC, Ciudad D'),
     ('Pedro', 'López', 'pedro.lopez@example.com', '555-2222', 'Calle 456, Ciudad E'),
     ('Laura', 'Díaz', 'laura.diaz@example.com', '555-3333', 'Boulevard MNO, Ciudad F'),
-    ('Miguel', 'Fernández', 'miguel.fernandez@example.com', '555-4444', 'Calle 789, Ciudad G'),
-    ('Luis', 'Sánchez', 'luis.sanchez@example.com', '555-5555', 'Avenida PQR, Ciudad H'),
-    ('Isabel', 'López', 'isabel.lopez@example.com', '555-2222', 'Boulevard XYZ, Ciudad I'),
-    ('Ricardo', 'Ramírez', 'ricardo.ramirez@example.com', '555-6666', 'Calle 123, Ciudad J'),
-    ('Sofía', 'Torres', 'sofia.torres@example.com', '555-7777', 'Avenida ABC, Ciudad K'),
-    ('Fernando', 'Gómez', 'fernando.gomez@example.com', '555-8888', 'Calle 456, Ciudad L'),
-    ('Elena', 'Hernández', 'elena.hernandez@example.com', '555-9999', 'Boulevard DEF, Ciudad M'),
-    ('Lucas', 'Mendoza', 'lucas.mendoza@example.com', '555-7777', 'Carrera 789, Ciudad N'),
-    ('Olivia', 'Dominguez', 'olivia.dominguez@example.com', '555-1111', 'Avenida MNO, Ciudad O'),
+    
     -- Puedes seguir agregando más registros de vendedores aquí
     ;
 CREATE TABLE facturas (
