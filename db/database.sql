@@ -1,11 +1,11 @@
 CREATE DATABASE IF NOT EXISTS trueke;
 USE trueke;
 
-CREATE TABLE clientes(
+CREATE TABLE compradores (
     id int(11) NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(45) NOT NULL,
     apellido VARCHAR(45) NOT NULL,
-    cadigopostal INT,
+    codigopostal INT,
     direccion VARCHAR(45) DEFAULT NULL,
     telefonofijo VARCHAR(20) DEFAULT NULL,
     telefonocelular VARCHAR(20) DEFAULT NULL,
@@ -14,6 +14,7 @@ CREATE TABLE clientes(
 );
 
 -- Insertar datos de clientes en la tabla
+
 INSERT INTO clientes (nombre, apellido, cadigopostal, direccion, telefonofijo, telefonocelular, correo)
 VALUES
     ('Juan', 'Pérez', '12345', 'Calle 123, Ciudad A', '555-1234', '555-5678', 'juan@example.com'),
@@ -28,9 +29,10 @@ VALUES
     ('Ricardo', 'Ramírez', '90123', 'Boulevard XYZ, Ciudad J', '555-6666', '555-7777', 'ricardo@example.com'),
     ('Sofía', 'Torres', '23456', 'Calle 234, Ciudad K', '555-7777', '555-8888', 'sofia@example.com'),
     ('Fernando', 'Gómez', '34567', 'Avenida 345, Ciudad L', '555-8888', '555-9999', 'fernando@example.com'),
-    -- Puedes seguir agregando más registros de vendedores aquí
-    ;
+;
 
+    -- Puedes seguir agregando más registros de vendedores aquí
+    
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(45) NOT NULL,
@@ -38,9 +40,10 @@ CREATE TABLE productos (
     stock INT NOT NULL,
     descripcion TEXT,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    -- Insertar datos de productos en la tabla
 );
 
--- Insertar datos de productos en la tabla
+
 INSERT INTO productos (marca, precio, stock, descripcion)
 VALUES
     ('Ropa', 29.99, 50, 'Camiseta de algodón para hombre'),
