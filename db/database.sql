@@ -56,7 +56,7 @@ VALUES
     ('Computadoras', 649.99, 15, 'Computadora de escritorio con pantalla grande'),
     ('Goyas', 19.99, 80, 'Producto de la marca Goyas en oferta'),
     ('Electrodomésticos', 199.99, 15, 'Lavadora automática de carga frontal'),
-     -- Puedes seguir agregando más registros de vendedores aquí
+    -- Puedes seguir agregando más registros de vendedores aquí
     ;
 
 CREATE TABLE Vendedores (
