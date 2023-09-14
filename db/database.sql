@@ -33,7 +33,7 @@ VALUES
 
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    marca VARCHAR(55) DEFAULT NULL,
+    descripcion VARCHAR(55) DEFAULT NULL,
     precio DECIMAL(10, 2) NOT NULL,
     stock INT NOT NULL,
     descripcion TEXT,
