@@ -15,7 +15,7 @@ CREATE TABLE compradores (
 
 -- Insertar datos de clientes en la tabla
 
-INSERT INTO clientes (nombre, apellido, cadigopostal, direccion, telefonofijo, telefonocelular, correo)
+INSERT INTO compradores (nombre, apellido, codigopostal, direccion, telefonofijo, telefonocelular, correo)
 VALUES
     ('Juan', 'Pérez', '12345', 'Calle 123, Ciudad A', '555-1234', '555-5678', 'juan@example.com'),
     ('María', 'González', '54321', 'Avenida XYZ, Ciudad B', '555-9876', '555-4321', 'maria@example.com'),
@@ -28,7 +28,7 @@ VALUES
     ('Isabel', 'López', '89012', 'Calle 789, Ciudad I', '555-2222', '555-3333', 'isabel@example.com'),
     ('Ricardo', 'Ramírez', '90123', 'Boulevard XYZ, Ciudad J', '555-6666', '555-7777', 'ricardo@example.com'),
     ('Sofía', 'Torres', '23456', 'Calle 234, Ciudad K', '555-7777', '555-8888', 'sofia@example.com'),
-    ('Fernando', 'Gómez', '34567', 'Avenida 345, Ciudad L', '555-8888', '555-9999', 'fernando@example.com'),
+    ('Fernando', 'Gómez', '34567', 'Avenida 345, Ciudad L', '555-8888', '555-9999', 'fernando@example.com')
 ;
 
     -- Puedes seguir agregando más registros de vendedores aquí
