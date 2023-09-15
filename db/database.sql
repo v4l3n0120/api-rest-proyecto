@@ -40,8 +40,9 @@ CREATE TABLE productos (
     stock INT NOT NULL,
     descripcion TEXT,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    -- Insertar datos de productos en la tabla
+    
 );
+-- Insertar datos de productos en la tabla
 
 
 INSERT INTO productos (marca, precio, stock, descripcion)
@@ -55,9 +56,9 @@ VALUES
     ('Celulares', 349.99, 30, 'Teléfono Android de gama media'),
     ('Computadoras', 649.99, 15, 'Computadora de escritorio con pantalla grande'),
     ('Goyas', 19.99, 80, 'Producto de la marca Goyas en oferta'),
-    ('Electrodomésticos', 199.99, 15, 'Lavadora automática de carga frontal'),
-    -- Puedes seguir agregando más registros de vendedores aquí
+    ('Electrodomésticos', 199.99, 15, 'Lavadora automática de carga frontal')
     ;
+    -- Puedes seguir agregando más registros de vendedores aquí
 
 CREATE TABLE Vendedores (
     idVendedor INT AUTO_INCREMENT PRIMARY KEY,
@@ -77,10 +78,10 @@ VALUES
     ('Carlos', 'Rodríguez', 'carlos.rodriguez@example.com', '555-1111', 'Carrera 789, Ciudad C'),
     ('Ana', 'Martínez', 'ana.martinez@example.com', '555-7890', 'Calle ABC, Ciudad D'),
     ('Pedro', 'López', 'pedro.lopez@example.com', '555-2222', 'Calle 456, Ciudad E'),
-    ('Laura', 'Díaz', 'laura.diaz@example.com', '555-3333', 'Boulevard MNO, Ciudad F'),
+    ('Laura', 'Díaz', 'laura.diaz@example.com', '555-3333', 'Boulevard MNO, Ciudad F')
     
-    -- Puedes seguir agregando más registros de vendedores aquí
     ;
+    -- Puedes seguir agregando más registros de vendedores aquí
 CREATE TABLE facturas (
     id int(11) NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(45) NOT NULL,
