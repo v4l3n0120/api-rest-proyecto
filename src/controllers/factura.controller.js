@@ -15,7 +15,7 @@ export const getFacturadores = async(req, res)=> {
 export const getFacturar = async(req, res)=> {
     try {
         throw new Error('Mi error')
-        const [rows] = await pool.query("SELECT * FROM facturadores WHERE id = ?",[req.params.id])
+        const [rows] = await pool.query("SELECT * FROM facturar WHERE id = ?",[req.params.id])
         if(rows.length <= 0) return res.status(404).json({
             message: "No existe un registro con ese id"
         })
