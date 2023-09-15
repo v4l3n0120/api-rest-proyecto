@@ -1,9 +1,9 @@
 import { pool } from '../db.js'
 
 
-export const getFacturadores = async(req, res)=> {
+export const getFacturas = async(req, res)=> {
     try {
-        throw new Error('Mi error')
+        //throw new Error('Mi error')
         const [rows] = await pool.query("SELECT * FROM facturadores")
         res.json(rows)
     } catch (error) {
@@ -12,9 +12,9 @@ export const getFacturadores = async(req, res)=> {
         })
     }
 }
-export const getFacturar = async(req, res)=> {
+export const getFactura = async(req, res)=> {
     try {
-        throw new Error('Mi error')
+        //throw new Error('Mi error')
         const [rows] = await pool.query("SELECT * FROM facturar WHERE id = ?",[req.params.id])
         if(rows.length <= 0) return res.status(404).json({
             message: "No existe un registro con ese id"
@@ -26,11 +26,11 @@ export const getFacturar = async(req, res)=> {
         })
     }
 }
-export const createFacturadores = async(req, res)=>{ 
+export const createFactura = async(req, res)=>{ 
     try {
-        throw new Error('Mi error')
+        //throw new Error('Mi error')
         const {name,salary} = req.body
-        const [rows] = await pool.query("INSERT INTO facturadores (name,salary) VALUES (?,?)",[name,salary])
+        const [rows] = await pool.query("INSERT INTO facturar (name,salary) VALUES (?,?)",[name,salary])
         res.send({
             id:rows.insertId,
             name, 
@@ -42,9 +42,9 @@ export const createFacturadores = async(req, res)=>{
         })
     }
 }
-export const updateFacturar = async(req, res)=> {
+export const updateFactura = async(req, res)=> {
     try {
-        throw new Error('Mi error')
+        //throw new Error('Mi error')
         const {id} = req.params
         const {name, salary} = req.body
         const [result] = await pool.query("UPDATE facturar SET name =?, salary=? WHERE id =?",[name,salary,id])
@@ -59,9 +59,9 @@ export const updateFacturar = async(req, res)=> {
         })
     }
 }
-export const updateFacturadores = async(req, res)=> {
+export const updateFacturas = async(req, res)=> {
     try {
-        throw new Error('Mi error')
+        //throw new Error('Mi error')
         const {id} = req.params
         const {name, salary} = req.body
         const [result] = await pool.query("UPDATE facturadores SET name = IFNULL(?,name), salary=IFNULL(?,salary) WHERE id =?",[name,salary,id])
@@ -77,9 +77,9 @@ export const updateFacturadores = async(req, res)=> {
     }
 }
 
-export const deleteFacturar = async(req, res)=> {
+export const deleteFacturas = async(req, res)=> {
     try {
-        throw new Error('Mi error')
+        //throw new Error('Mi error')
         const [result] = await pool.query("DELETE FROM facturar WHERE id = ?",[req.params.id])
         if (result.affectedRows <=0) return res.status(404).json ({
             message:"Empleado no encontrado"
