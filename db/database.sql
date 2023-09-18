@@ -35,7 +35,6 @@ VALUES
     
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    marca VARCHAR(45) NOT NULL,
     precio DECIMAL(10, 2) NOT NULL,
     stock INT NOT NULL,
     descripcion TEXT,
@@ -61,13 +60,13 @@ VALUES
     -- Puedes seguir agregando más registros de vendedores aquí
 
 CREATE TABLE Vendedores (
-    idVendedor INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(45) NOT NULL,
-    Apellido VARCHAR(45) NOT NULL,
-    Email VARCHAR(100) NOT NULL,
-    Telefono VARCHAR(20),
-    Direccion VARCHAR(100),
-    FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(45) NOT NULL,
+    apellido VARCHAR(45) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20),
+    direccion VARCHAR(100),
+    fechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Insertar datos de vendedores en la tabla
