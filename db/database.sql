@@ -78,9 +78,9 @@ VALUES
     ('Ana', 'Martínez', 'ana.martinez@example.com', '555-7890', 'Calle ABC, Ciudad D'),
     ('Pedro', 'López', 'pedro.lopez@example.com', '555-2222', 'Calle 456, Ciudad E'),
     ('Laura', 'Díaz', 'laura.diaz@example.com', '555-3333', 'Boulevard MNO, Ciudad F')
-    
     ;
     -- Puedes seguir agregando más registros de vendedores aquí
+    
 CREATE TABLE facturas (
     id int(11) NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(45) NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE facturas (
     correo VARCHAR (45) DEFAULT NULL,
     PRIMARY KEY (id)
 );
-INSERT INTO facturas (nombre, apellido, codigopostal, direccion, telefonofijo, correo)
+INSERT INTO facturas(nombre, apellido, codigopostal, direccion, telefonofijo, correo)
 VALUES
     ('Juan', 'Perez', 12345, 'Calle 123', '555-123-4567', 'juan@example.com'),
     ('Maria', 'Lopez', 54321, 'Avenida 456', '555-987-6543', 'maria@example.com'),
