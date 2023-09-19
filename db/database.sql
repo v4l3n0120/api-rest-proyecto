@@ -44,18 +44,18 @@ CREATE TABLE productos (
 -- Insertar datos de productos en la tabla
 
 
-INSERT INTO productos (marca, precio, stock, descripcion)
+INSERT INTO productos (precio, stock, descripcion)
 VALUES
-    ('Ropa', 29.99, 50, 'Camiseta de algodón para hombre'),
-    ('Celulares', 499.99, 25, 'Teléfono inteligente de última generación'),
-    ('Computadoras', 899.99, 10, 'Portátil de alto rendimiento'),
-    ('Goyas', 9.99, 100, 'Producto de la marca Goyas'),
-    ('Electrodomésticos', 299.99, 20, 'Licuadora de alta potencia'),
-    ('Ropa', 39.99, 75, 'Vestido elegante para mujer'),
-    ('Celulares', 349.99, 30, 'Teléfono Android de gama media'),
-    ('Computadoras', 649.99, 15, 'Computadora de escritorio con pantalla grande'),
-    ('Goyas', 19.99, 80, 'Producto de la marca Goyas en oferta'),
-    ('Electrodomésticos', 199.99, 15, 'Lavadora automática de carga frontal')
+    ( 29.99, 50, 'Camiseta de algodón para hombre'),
+    ( 499.99, 25, 'Teléfono inteligente de última generación'),
+    (899.99, 10, 'Portátil de alto rendimiento'),
+    ( 9.99, 100, 'Producto de la marca Goyas'),
+    (299.99, 20, 'Licuadora de alta potencia'),
+    (39.99, 75, 'Vestido elegante para mujer'),
+    ( 349.99, 30, 'Teléfono Android de gama media'),
+    ( 649.99, 15, 'Computadora de escritorio con pantalla grande'),
+    (19.99, 80, 'Producto de la marca Goyas en oferta'),
+    (199.99, 15, 'Lavadora automática de carga frontal')
     ;
     -- Puedes seguir agregando más registros de vendedores aquí
 
