@@ -1,12 +1,11 @@
 <div align="center">
-<h1>Treuke</h1>
+<h1>Trueke</h1>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=+++++++%C2%A1Cambia+lo+que+tienes+;+++++++++por+lo+que+necesitas!" alt="Typing SVG" /></a>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=bienvenidos+a+trueke+donde+;se+comersializa+con+todos)](https://git.io/typing-svg)
-
-<img src="public/img/logo.png" alt="" /> 
+<img src="public/img/logo.png" alt="100px" /> 
 
 <h2>Descripcion:</h2>
-<p>Este proyecto trata </p>
+<p>Trueke es una plataforma en línea dedicada a fomentar el intercambio de bienes y objetos que ya no se utilizan en tu comunidad. Nuestra misión es proporcionar una solución sencilla y efectiva para reducir el desperdicio, promover la sostenibilidad y construir una red de personas que valoren el intercambio y la reutilización </p>
 
 <h3>Integrantes</h3>
 
