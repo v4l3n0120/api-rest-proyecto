@@ -3,7 +3,6 @@ import { pool } from '../db.js'
 
 export const getFacturas = async(req, res)=> {
     try {
-        //throw new Error('Mi error')
         const [rows] = await pool.query("SELECT * FROM facturas")
         res.json(rows)
     } catch (error) {
@@ -14,7 +13,6 @@ export const getFacturas = async(req, res)=> {
 }
 export const getFactura = async(req, res)=> {
     try {
-        //throw new Error('Mi error')
         const [rows] = await pool.query("SELECT * FROM facturas WHERE id = ?",[req.params.id])
         if(rows.length <= 0) return res.status(404).json({
             message: "No existe un registro con ese id"
@@ -28,7 +26,6 @@ export const getFactura = async(req, res)=> {
 }
 export const createFactura = async(req, res)=>{ 
     try {
-        //throw new Error('Mi error')
         const {nombre, apellido, codigopostal, direccion, telefonofijo, correo} = req.body
         const [rows] = await pool.query("INSERT INTO facturas (nombre, apellido, codigopostal, direccion, telefonofijo, correo) VALUES (?,?,?,?,?,?)",[nombre, apellido, codigopostal, direccion, telefonofijo, correo])
         res.send({
@@ -48,7 +45,6 @@ export const createFactura = async(req, res)=>{
 }
 export const updateFactura = async(req, res)=> {
     try {
-        //throw new Error('Mi error')
         const {id} = req.params
         const {nombre, apellido, codigopostal, direccion, telefonofijo, correo} = req.body
         const [result] = await pool.query("UPDATE facturas SET nombre =?, apellido=?, codigopostal=?, direccion=?, telefonofijo=?, correo=?, WHERE id =?",[nombre, apellido, codigopostal, direccion, telefonofijo, correo, id])
@@ -65,7 +61,6 @@ export const updateFactura = async(req, res)=> {
 }
 export const updateFacturas = async(req, res)=> {
     try {
-        //throw new Error('Mi error')
         const {id} = req.params
         const {nombre, apellido, codigopostal, direccion, telefonofijo, correo } = req.body
         const [result] = await pool.query("UPDATE facturas SET nombre= IFNULL(?,nombre), apellido=IFNULL(?,apellido) , codigopostal=IFNULL(?,codigopostal), direccion=IFNULL(?,direccion), telefonofijo=IFNULL(?,telefonofijo), correo=IFNULL(?,correo) WHERE id =?",[nombre, apellido, codigopostal, direccion, telefonofijo, correo,id])
@@ -83,7 +78,6 @@ export const updateFacturas = async(req, res)=> {
 
 export const deleteFacturas = async(req, res)=> {
     try {
-        //throw new Error('Mi error')
         const [result] = await pool.query("DELETE FROM facturas WHERE id = ?",[req.params.id])
         if (result.affectedRows <=0) return res.status(404).json ({
             message:"factura no encontrado"
